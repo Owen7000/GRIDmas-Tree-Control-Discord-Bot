@@ -1,0 +1,23 @@
+{
+  "name": "gridmas-tree-control-discord-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot to control the GRIDmas Tree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Owen7000/GRIDmas-Tree-Control-Discord-Bot.git"
+  },
+  "author": "Owen Plimer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Owen7000/GRIDmas-Tree-Control-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/Owen7000/GRIDmas-Tree-Control-Discord-Bot#readme",
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "pagination.djs": "^4.0.18"
+  }
+}
