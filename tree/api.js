@@ -1,4 +1,4 @@
-const TREE_API = process.env.TREE_API ?? "http://localhost";
+const TREE_API = process.env.TREE_API ?? "http://localhost:4000";
 
 async function request(path, options = {}) {
     const response = await fetch(`${TREE_API}${path}`, {
@@ -12,3 +12,12 @@ async function request(path, options = {}) {
 
     return response;
 }
+
+async function getCurrentPattern() {
+    const response = await request("/current/pattern");
+    return response.json();
+}
+
+module.exports = {
+    getCurrentPattern,
+};
