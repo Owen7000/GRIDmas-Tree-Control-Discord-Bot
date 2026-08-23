@@ -21,8 +21,14 @@ async function request(path, options = {}) {
 }
 
 async function getCurrentPattern() {
-    const response = await request("/current/pattern");
-    return response.json();
+    const { response, duration } = await request("/current/pattern");
+
+    const data = await response.json();
+
+    return {
+        ...data,
+        responseTime:duration
+    };
 }
 
 module.exports = {
