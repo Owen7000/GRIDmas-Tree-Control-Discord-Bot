@@ -44,10 +44,16 @@ client.on(Events.InteractionCreate, async (interaction) => {
         return;
     }
 
-    try {
-        await command.autocomplete(interaction);
-    } catch (error) {
-        console.error(error);
+    if(interaction.isAutocomplete()) {
+        try {
+            if (typeof command.autocomplete === "function") {
+                    await command.autocomplete(interaction);
+            }
+        } catch (error) {
+            console.error(error);
+        }
+
+        return;
     }
 
     try {
